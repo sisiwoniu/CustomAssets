@@ -212,7 +212,6 @@ public class CustomScrollView : UIBehaviour {
             OnScrollEvent();
         }
 
-
         //スクロール終了したら中心オブジェクトへ更新する
         UpdateCenterItemEvent();
         //Debug.Log("スクロール終了イベント");
