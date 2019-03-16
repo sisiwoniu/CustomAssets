@@ -96,7 +96,7 @@ public class CustomScrollView : UIBehaviour {
 
         Vector3 pos = Vector3.zero;
 
-        var downPos = (vertical ? itemParent.rect.size.y : itemParent.rect.size.x) * 0.5f - cellOffSet;
+        var downPos = (vertical ? itemParent.rect.size.y : itemParent.rect.size.x) * 0.5f - cellOffSet + (vertical ? scrollView.anchoredPosition.y : scrollView.anchoredPosition.x);
 
         if(vertical)
             pos.y = downPos;
@@ -125,7 +125,7 @@ public class CustomScrollView : UIBehaviour {
 
                 var data = ApplyNormalizeCenterDist(item.transform.position).x;
 
-                if(data < 0.05f && data > -0.05f)
+                if(data < 0.1f && data > -0.1f)
                     zeroPosIndex = i;
             }
 
